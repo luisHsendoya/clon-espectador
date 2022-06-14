@@ -1,0 +1,14 @@
+@mixin flex-box ($display, $justify, $align) {
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+nav {
+    article {
+        .card-outstanding {
+            @include flex-box(flex, start, start);
+            flex-flow: row wrap;
+        }
+    }
+}

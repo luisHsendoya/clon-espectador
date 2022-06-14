@@ -1,0 +1,29 @@
+$padding:1rem 1rem;
+@mixin flex-box ($display, $justify, $align) {
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+.container-fluid {
+    display: grid;
+    grid-template-columns: 2fr 6fr 4fr;
+    grid-auto-rows: auto;
+    grid-template-areas: "aside main aside2";
+    column-gap: 1rem;
+    grid-area: aside;
+    .container-outstanding {
+        grid-area: aside;
+        padding: $padding;
+    }
+    .section {
+        .card {
+            grid-area: main;
+            padding: $padding;
+        }
+    }
+    .container-opinions {
+        grid-area: aside2;
+        padding: $padding;
+    }
+}

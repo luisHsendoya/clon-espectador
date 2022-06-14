@@ -1,0 +1,47 @@
+$border: 1px solid rgba(0, 0, 0, 0.842);
+@mixin text ($size, $color, $heigth, $align, $decoration) {
+    font-size: $size;
+    color: $color;
+    font-weight: $heigth;
+    text-align: $align;
+    text-decoration: $decoration;
+}
+
+@mixin flex-box ($display, $justify, $align) {
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+header {
+    .container-logo {
+        width: 60%;
+        height: 6.25rem;
+        margin: 0 auto;
+        @include flex-box(flex, center, center);
+        padding: 1rem 2rem;
+        border-bottom: $border;
+        .container-logo__img {
+            width: 22rem;
+            height: auto;
+            object-fit: cover;
+            margin: 2px 10px 0 14px;
+        }
+    }
+    nav {
+        .nav-container {
+            @include flex-box(flex, center, center);
+            padding: 0 5rem;
+            .nav-item__menu {
+                @include text(1.5rem, #333, 200, center, none);
+                padding: 0 3.39rem;
+                border-bottom: $border;
+                margin-bottom: 5rem;
+            }
+            a:hover {
+                background-color: #FFA500;
+                font-weight: bolder;
+            }
+        }
+    }
+}
