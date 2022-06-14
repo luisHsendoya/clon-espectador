@@ -15,10 +15,10 @@ $padding:1rem 1rem;
 
 .container-fluid {
     display: grid;
-    grid-template-columns: 2fr 6fr 4fr;
     grid-auto-rows: auto;
+    grid-template-columns: 2fr 6fr 4fr;
     grid-template-areas: "aside main aside2";
-    column-gap: 0.3rem;
+    column-gap: 1.5rem;
     grid-area: aside;
     .container-outstanding {
         grid-area: aside;
@@ -87,6 +87,13 @@ $padding:1rem 1rem;
                 font-family: Arial, Helvetica, sans-serif;
             }
         }
+        .container-img {
+            @include flex-box(flex, center, center);
+            .container-img-article {
+                height: auto;
+                object-fit: cover;
+            }
+        }
         .container-source {
             p {
                 @include text(1.35rem, black, 500, left, none);
@@ -110,7 +117,52 @@ $padding:1rem 1rem;
     }
     .container-opinions {
         grid-area: aside2;
-        padding: $padding;
-        display: grid;
+        nav {
+            .wrapper-opinions {
+                border-top: 1px black solid;
+                @include flex-box(flex, center, center);
+                padding: 0 2rem;
+                margin: 0 1rem;
+            }
+            a {
+                @include text(1.8rem, black, bolder, center, none);
+                padding: 0.5rem 1.5rem;
+            }
+        }
+        .card-opinions {
+            width: 90%;
+            display: grid;
+            grid-template-columns: 3fr 9fr;
+            grid-auto-rows: auto;
+            padding: 2.5rem 0;
+            margin-left: 2rem;
+            .card-opinions__img {
+                width: 8rem;
+                border-radius: 10rem;
+            }
+            .card-opinions__body {
+                h3 {
+                    @include text(2.2rem, black, 500, left, none);
+                    padding: 0.9rem 0;
+                }
+                p {
+                    @include text(1.5rem, black, bolder, left, none);
+                }
+                .card-opinions__footer {
+                    @include flex-box(flex, space-between, center);
+                    span {
+                        @include text(1.3rem, gray, 200, left, none);
+                        padding: 0.5rem 1rem 0.5rem 1rem;
+                    }
+                    .footer-icon {
+                        color: red;
+                        padding: 0.1rem 1rem 1rem 0;
+                        i {
+                            padding: 0 0.4rem;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

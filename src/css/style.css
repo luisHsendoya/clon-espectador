@@ -33,10 +33,10 @@ header nav .nav-container {
 
 .container-fluid {
   display: grid;
-  grid-template-columns: 2fr 6fr 4fr;
   grid-auto-rows: auto;
+  grid-template-columns: 2fr 6fr 4fr;
   grid-template-areas: "aside main aside2";
-  column-gap: 0.3rem;
+  column-gap: 1.5rem;
   grid-area: aside; }
   .container-fluid .container-outstanding {
     grid-area: aside;
@@ -109,6 +109,13 @@ header nav .nav-container {
       text-decoration: none;
       padding: 0.5rem 0rem 0.5rem 1rem;
       font-family: Arial, Helvetica, sans-serif; }
+    .container-fluid .card .container-img {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .container-fluid .card .container-img .container-img-article {
+        height: auto;
+        object-fit: cover; }
     .container-fluid .card .container-source p {
       font-size: 1.35rem;
       color: black;
@@ -133,9 +140,60 @@ header nav .nav-container {
         .container-fluid .card .card-footer .footer-icon i {
           padding: 0 0.4rem; }
   .container-fluid .container-opinions {
-    grid-area: aside2;
-    padding: 1rem 1rem;
-    display: grid; }
+    grid-area: aside2; }
+    .container-fluid .container-opinions nav .wrapper-opinions {
+      border-top: 1px black solid;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 2rem;
+      margin: 0 1rem; }
+    .container-fluid .container-opinions nav a {
+      font-size: 1.8rem;
+      color: black;
+      font-weight: bolder;
+      text-align: center;
+      text-decoration: none;
+      padding: 0.5rem 1.5rem; }
+    .container-fluid .container-opinions .card-opinions {
+      width: 90%;
+      display: grid;
+      grid-template-columns: 3fr 9fr;
+      grid-auto-rows: auto;
+      padding: 2.5rem 0;
+      margin-left: 2rem; }
+      .container-fluid .container-opinions .card-opinions .card-opinions__img {
+        width: 8rem;
+        border-radius: 10rem; }
+      .container-fluid .container-opinions .card-opinions .card-opinions__body h3 {
+        font-size: 2.2rem;
+        color: black;
+        font-weight: 500;
+        text-align: left;
+        text-decoration: none;
+        padding: 0.9rem 0; }
+      .container-fluid .container-opinions .card-opinions .card-opinions__body p {
+        font-size: 1.5rem;
+        color: black;
+        font-weight: bolder;
+        text-align: left;
+        text-decoration: none; }
+      .container-fluid .container-opinions .card-opinions .card-opinions__body .card-opinions__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        .container-fluid .container-opinions .card-opinions .card-opinions__body .card-opinions__footer span {
+          font-size: 1.3rem;
+          color: gray;
+          font-weight: 200;
+          text-align: left;
+          text-decoration: none;
+          padding: 0.5rem 1rem 0.5rem 1rem; }
+        .container-fluid .container-opinions .card-opinions .card-opinions__body .card-opinions__footer .footer-icon {
+          color: red;
+          padding: 0.1rem 1rem 1rem 0; }
+          .container-fluid .container-opinions .card-opinions .card-opinions__body .card-opinions__footer .footer-icon i {
+            padding: 0 0.4rem; }
 
 * {
   padding: 0;
