@@ -1,17 +1,16 @@
 header .container-logo {
-  width: 60%;
-  height: 6.25rem;
+  height: 100%;
+  height: auto;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1rem 2rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.842); }
+  margin: 2rem 0; }
   header .container-logo .container-logo__img {
-    width: 22rem;
+    width: 35rem;
     height: auto;
-    object-fit: cover;
-    margin: 2px 10px 0 14px; }
+    object-fit: contain; }
 
 header nav .nav-container {
   display: flex;
@@ -24,11 +23,11 @@ header nav .nav-container {
     font-weight: 200;
     text-align: center;
     text-decoration: none;
-    padding: 0 3.39rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.842);
-    margin-bottom: 5rem; }
+    padding: 0.8rem 3.39rem;
+    margin-bottom: 5rem;
+    border-top: 1px black solid;
+    border-bottom: 1px black solid; }
   header nav .nav-container a:hover {
-    background-color: #FFA500;
     font-weight: bolder; }
 
 .container-fluid {
