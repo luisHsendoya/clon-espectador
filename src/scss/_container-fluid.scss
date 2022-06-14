@@ -5,25 +5,79 @@ $padding:1rem 1rem;
     align-items: $align;
 }
 
+@mixin text ($size, $color, $heigth, $align, $decoration) {
+    font-size: $size;
+    color: $color;
+    font-weight: $heigth;
+    text-align: $align;
+    text-decoration: $decoration;
+}
+
 .container-fluid {
     display: grid;
     grid-template-columns: 2fr 6fr 4fr;
     grid-auto-rows: auto;
     grid-template-areas: "aside main aside2";
-    column-gap: 1rem;
+    column-gap: 0.3rem;
     grid-area: aside;
     .container-outstanding {
         grid-area: aside;
         padding: $padding;
+        display: flex;
+        flex-direction: column;
+        .container-title {
+            @include text(2rem, black, bolder, left, none);
+            padding: 0.2rem 1rem;
+            border-bottom: 1px black solid;
+        }
+        article {
+            .card-outstanding {
+                img {
+                    width: 100%;
+                    height: auto;
+                    padding: 1rem 0rem;
+                    object-fit: cover;
+                }
+                .card-outstanding__item {
+                    h3 {
+                        strong {
+                            @include text(1.3rem, red, 300, left, none);
+                            padding: 0.5rem 0rem;
+                        }
+                    }
+                }
+                .card-outstanding__title {
+                    p {
+                        @include text(1.8rem, black, 500, left, none);
+                        padding: 1.2rem 0rem;
+                    }
+                }
+                .card-outstanding__footer {
+                    @include flex-box(flex, space-between, center);
+                    span {
+                        @include text(1.35rem, gray, 200, left, none);
+                    }
+                    .footer-icon {
+                        color: red;
+                    }
+                }
+            }
+        }
     }
     .section {
         .card {
             grid-area: main;
-            padding: $padding;
+            .card-item {
+                background-color: red;
+                a {
+                    @include text(1.3rem, red, 300, left, none);
+                }
+            }
         }
     }
     .container-opinions {
         grid-area: aside2;
         padding: $padding;
+        display: grid;
     }
 }
