@@ -59,18 +59,51 @@ $padding:1rem 1rem;
                     }
                     .footer-icon {
                         color: red;
+                        i {
+                            padding: 0 0.4rem;
+                        }
                     }
                 }
             }
         }
     }
-    .section {
-        .card {
-            grid-area: main;
-            .card-item {
-                background-color: red;
-                a {
-                    @include text(1.3rem, red, 300, left, none);
+    .card {
+        grid-area: main;
+        .card-item {
+            h3 {
+                @include text(1.5rem, red, 400, left, none);
+                padding: 0.5rem 0rem;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        }
+        .title-container {
+            @include text(4em, black, 400, center, none);
+            padding: 0.5rem 0rem 1rem 0rem;
+        }
+        .subtitle-container {
+            p {
+                @include text(1.65rem, black, light, justify, none);
+                padding: 0.5rem 0rem 0.5rem 1rem;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        }
+        .container-source {
+            p {
+                @include text(1.35rem, black, 500, left, none);
+                padding: 0.1rem 1rem 1rem 1rem;
+            }
+        }
+        .card-footer {
+            @include flex-box(flex, space-between, center);
+            span {
+                @include text(1.6rem, gray, 200, left, none);
+                padding: 0.1rem 1rem 1rem 1rem;
+            }
+            .footer-icon {
+                color: red;
+                padding: 0.1rem 1rem 1rem 0;
+                i {
+                    padding: 0 0.4rem;
                 }
             }
         }

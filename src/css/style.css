@@ -82,16 +82,56 @@ header nav .nav-container {
         text-decoration: none; }
       .container-fluid .container-outstanding article .card-outstanding .card-outstanding__footer .footer-icon {
         color: red; }
-  .container-fluid .section .card {
+        .container-fluid .container-outstanding article .card-outstanding .card-outstanding__footer .footer-icon i {
+          padding: 0 0.4rem; }
+  .container-fluid .card {
     grid-area: main; }
-    .container-fluid .section .card .card-item {
-      background-color: red; }
-      .container-fluid .section .card .card-item a {
-        font-size: 1.3rem;
-        color: red;
-        font-weight: 300;
+    .container-fluid .card .card-item h3 {
+      font-size: 1.5rem;
+      color: red;
+      font-weight: 400;
+      text-align: left;
+      text-decoration: none;
+      padding: 0.5rem 0rem;
+      font-family: Arial, Helvetica, sans-serif; }
+    .container-fluid .card .title-container {
+      font-size: 4em;
+      color: black;
+      font-weight: 400;
+      text-align: center;
+      text-decoration: none;
+      padding: 0.5rem 0rem 1rem 0rem; }
+    .container-fluid .card .subtitle-container p {
+      font-size: 1.65rem;
+      color: black;
+      font-weight: light;
+      text-align: justify;
+      text-decoration: none;
+      padding: 0.5rem 0rem 0.5rem 1rem;
+      font-family: Arial, Helvetica, sans-serif; }
+    .container-fluid .card .container-source p {
+      font-size: 1.35rem;
+      color: black;
+      font-weight: 500;
+      text-align: left;
+      text-decoration: none;
+      padding: 0.1rem 1rem 1rem 1rem; }
+    .container-fluid .card .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .container-fluid .card .card-footer span {
+        font-size: 1.6rem;
+        color: gray;
+        font-weight: 200;
         text-align: left;
-        text-decoration: none; }
+        text-decoration: none;
+        padding: 0.1rem 1rem 1rem 1rem; }
+      .container-fluid .card .card-footer .footer-icon {
+        color: red;
+        padding: 0.1rem 1rem 1rem 0; }
+        .container-fluid .card .card-footer .footer-icon i {
+          padding: 0 0.4rem; }
   .container-fluid .container-opinions {
     grid-area: aside2;
     padding: 1rem 1rem;
